@@ -1,0 +1,54 @@
+/* General*/
+body {
+    font: 15px/1.5 Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+/* Header */
+header {
+    -webkit-text-stroke: 0.3px black;
+    background-color:lightgrey;
+    color:dodgerblue;
+    padding-top:30px;
+    min-height: 70px;
+    border-bottom:lightblue 3px solid;
+}
+
+header a {
+    -webkit-text-stroke: 0.2px black;
+    color: dodgerblue;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+
+header li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #companyName {
+    padding-left: 2%;
+    float: left;
+}
+header #companyName h1 {
+    margin: 0;
+}
+
+header nav {
+    float:right;
+    margin-top: 10px;
+}
+
+header .current a {
+    color: dodgerblue;
+    font-weight: bold;
+}
+
+header a:hover {
+    color:#5f2dab;
+    font-weight: bold;
+}

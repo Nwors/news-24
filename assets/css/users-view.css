@@ -1,0 +1,112 @@
+@media (max-width: 60em) {
+    body {
+        padding: 3rem;
+    }
+}
+
+.pagination {
+    display: inline-block;
+}
+
+.page-link {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.grid {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-rows : auto;
+    grid-template-columns: repeat(5,1fr);
+    align-items: start;
+}
+
+
+@media (max-width: 60em) {
+    .grid {
+        grid-gap: 3rem;
+    }
+}
+.cards-container {
+    margin: 1% 1% 0% 1%;
+}
+.grid__item {
+    background-color: #fff;
+    border-radius: .4rem;
+    overflow: hidden;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.2s;
+}
+.grid__item:hover {
+    transform: translateY(-0.5%);
+    box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.2);
+}
+
+.card__img {
+    display: block;
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+}
+.card__content {
+    padding: 1rem 1rem;
+}
+.card__header {
+    font-size: 16px;
+    font-weight: 500;
+    color: #0d0d0d;
+    margin-bottom: 1.5rem;
+}
+.card__text {
+    font-size: 16px;
+    letter-spacing: .1rem;
+    line-height: 1.7;
+    color: #3d3d3d;
+    margin-bottom: 2.5rem;
+}
+.card__btn {
+    display: block;
+    width: 50%;
+    height: 3rem;
+    padding: 1rem;
+    font-size: 15px;
+    text-align: center;
+    color: #3363ff;
+    background-color: #e6ecff;
+    border: none;
+    border-radius: .4rem;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.card__btn span {
+    margin-left: 1rem;
+    transition: 0.2s;
+}
+.card__btn:hover, .card__btn:active {
+    background-color: #dce4ff;
+}
+.card__btn:hover span, .card__btn:active span {
+    margin-left: 1.5rem;
+}
+
+.pagination {
+    margin-left:40%;
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pactive {
+    background-color:indianred;
+}
+
+
+
