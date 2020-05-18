@@ -6,7 +6,7 @@
 forEach($users as $user) {
     echo " 
         <div class=\"grid__item\">
-            <div class=\"card\"><img class=\"card__img\" src=\"/uploads/",$user['image'],"\">
+            <div class=\"card\"><img class=\"card__img\" src=\"/",$_SERVER['HTTP_HOST'],"/",$user['image'],"\">
                 <div class=\"card__content\">
                     <h1 class=\"card__header\">",$user['login'],"</h1>
                     <p class=\"card__text\"></p>

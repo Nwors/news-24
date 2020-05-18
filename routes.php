@@ -82,7 +82,7 @@ function addRoutes() {
                 $keywords = filter_var($_POST['keywords'],FILTER_SANITIZE_STRING);
                 $text = filter_var($_POST['text'],FILTER_SANITIZE_STRING);
                 if(!($_FILES['image']['size'] == 0)) {
-                    $fileName = upload_image($_FILES['image'],"/var/www/html/news24/uploads");
+                    $fileName = upload_image($_FILES['image'],$_SERVER['DOCUMENT_ROOT']);
                     $fileName = explode("/",$fileName);
                     $fileName = $fileName[count($fileName)-1];
                 }
@@ -151,7 +151,7 @@ function addRoutes() {
                     $login = filter_var($_POST["login"],FILTER_SANITIZE_STRING);
                     $password = filter_var($_POST["password"],FILTER_SANITIZE_STRING);
                     if(!($_FILES['image']['size'] == 0)) {
-                        $fileName = upload_image($_FILES['image'],"/var/www/html/news24/uploads");
+                        $fileName = upload_image($_FILES['image'],$_SERVER['DOCUMENT_ROOT']);
                         $fileName = explode("/",$fileName);
                         $fileName = $fileName[count($fileName)-1];
                     }

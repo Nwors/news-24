@@ -1,7 +1,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <div class = "news-container">
-    <image src = <?= "../uploads/".$news['image']?>></image>
+    <image src = <?= "../".$_SERVER['HTTP_HOST']."/".$news['image']?>></image>
         <div><?=$news['text'] ?></div>
         <div id = 'publishedBy'>Published by <?=$news['author']?></div>
         <style>
