@@ -128,6 +128,7 @@ function addRoutes() {
 
             $uri = getUri();
             $users = getAllUsers();
+            $uploadPath = getUploadPath();
             $usersSplited = array_chunk($users,10);
             $page = ltrim(end(explode('?',$_SERVER['REQUEST_URI'])),"page=");
             include "nav.php";
@@ -151,7 +152,7 @@ function addRoutes() {
                     $login = filter_var($_POST["login"],FILTER_SANITIZE_STRING);
                     $password = filter_var($_POST["password"],FILTER_SANITIZE_STRING);
                     if(!($_FILES['image']['size'] == 0)) {
-                        $fileName = upload_image($_FILES['image'],$_SERVER['DOCUMENT_ROOT']."/uploads");
+                        $fileName = upload_image($_FILES['image'],getUploadPath());
                         $fileName = explode("/",$fileName);
                         $fileName = $fileName[count($fileName)-1];
                     }

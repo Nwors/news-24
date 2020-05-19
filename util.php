@@ -52,3 +52,7 @@ function upload_image($image, $folder) {
 
     return $filename;
 }
+
+function getUploadPath() {
+    return $_SERVER["DOCUMENT_ROOT"].'/uploads';
+}
