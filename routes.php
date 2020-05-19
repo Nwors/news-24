@@ -47,6 +47,7 @@ function addRoutes() {
 
     Router::add("/", function() {
         $user = $_SESSION['currentUser'];
+        $serverName = getServerName();
         include "nav.php";
         include "profile-page.php";
     });
@@ -66,6 +67,7 @@ function addRoutes() {
 
         $uri = getUri();
         $news = getAllNews();
+        $serverName = getServerName();
         $newsSplited = array_chunk($news,10);
         $page = ltrim(end(explode('?',$_SERVER['REQUEST_URI'])),"page=");
         include "nav.php";
@@ -99,7 +101,7 @@ function addRoutes() {
             $splitedUri = explode("/",$uri);
             $newsId = ltrim(end($splitedUri),"id");
             $news = getNewsById($newsId);
-
+            $serverName = getServerName();
             if($requestMethod == "GET") {
                 include "nav.php";
                 include "news-page.php";

@@ -13,7 +13,7 @@
         forEach($news as $n) {
             echo " 
         <div class=\"grid__item\">
-            <div class=\"card\"><img class=\"card__img\" src=\"/uploads/",$n['image'],"\">
+            <div class=\"card\"><img class=\"card__img\" src=\"",$serverName,"/uploads/",$n['image'],"\">
                 <div class=\"card__content\">
                     <h1 class=\"card__header\">",$n['name'],"</h1>
                     <p class=\"card__text\">published by: ".$n['author']."</p>
