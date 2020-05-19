@@ -56,3 +56,7 @@ function upload_image($image, $folder) {
 function getUploadPath() {
     return $_SERVER["DOCUMENT_ROOT"].'/uploads';
 }
+
+function getServerName() {
+    return $_SERVER['HTTP_HOST'];
+}

@@ -128,7 +128,7 @@ function addRoutes() {
 
             $uri = getUri();
             $users = getAllUsers();
-            $uploadPath = getUploadPath();
+            $serverName = getServerName();
             $usersSplited = array_chunk($users,10);
             $page = ltrim(end(explode('?',$_SERVER['REQUEST_URI'])),"page=");
             include "nav.php";
