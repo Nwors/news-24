@@ -6,7 +6,8 @@ function createUser($login, $password) {
     try {
         $statement->execute([$login, $password]);
     } catch (PDOException $exception) {
-        throw new InvalidArgumentException("User with this login already exist");
+        var_dump($exception);
+        die();
     }
 }
 
